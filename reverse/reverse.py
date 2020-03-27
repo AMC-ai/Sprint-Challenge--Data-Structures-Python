@@ -53,13 +53,13 @@ class LinkedList:
         # iterate thru single linked list
         # set base
         while current_node is not None:
-            # store next node
+            # store next node value
             next_node = current_node.get_next()
             # change next of current node to prev_node ("shift over" the value)
             current_node.set_next(prev_node)
-            # prev node = current (value "shifted")
+            # prev node = current_node (value has "shifted" to prev_node)
             prev_node = current_node
-            # and current = nxt (value are reversed or "shifted")
+            # and current_node = next_node (values are reversed or "shifted")
             current_node = next_node
-            # reverse list now provides reverse list
+            # reverse list now provides reverse list node values 1-2-3-none -> 3-2-1-none
         self.head = prev_node
