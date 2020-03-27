@@ -36,6 +36,12 @@ class RingBuffer:
         list_buffer_contents = []
 
         # TODO: Your code here
+        # temp list for returning items
+        data = self.storage.head
+        list_buffer_contents.append(data.value)
+        # loop through data / nodes to append values ?? loop didn't work while statement is working? what am i missing
+        while data != self.storage.tail:
+            data = data.next
 
         return list_buffer_contents
 
