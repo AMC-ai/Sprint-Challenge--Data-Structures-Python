@@ -47,4 +47,19 @@ class LinkedList:
 
     def reverse_list(self, node, prev):
         # You must use recursion for this solution
-        pass
+        current_node = self.head
+        prev_node = None
+
+        # Process: iterate thru single linked list
+
+        while current_node is not None:
+            # store next node
+            next_node = current_node.get_next()
+            # change next of current to prev_node
+            current_node.set_next(prev_node)
+            # prev node = current
+            prev_node = current_node
+            # and current = nxt
+            current_node = next_node
+            # reverse list
+        self.head = prev_node
