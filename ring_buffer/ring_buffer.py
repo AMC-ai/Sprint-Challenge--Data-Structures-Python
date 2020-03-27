@@ -37,11 +37,12 @@ class RingBuffer:
 
         # TODO: Your code here
         # temp list for returning items
-        data = self.storage.head
-        list_buffer_contents.append(data.value)
-        # loop through data / nodes to append values ?? loop didn't work while statement is working? what am i missing
-        while data != self.storage.tail:
-            data = data.next
+        current = self.storage.head
+        list_buffer_contents.append(current.value)
+        # loop through data / nodes to append values ?? loop didn't work while statement isn't working? what am i missing i don't understand my error.
+        while current != self.storage.tail:
+            # Sets data to move throughout the list
+            current = current.next
 
         return list_buffer_contents
 
