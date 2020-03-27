@@ -50,7 +50,7 @@ class LinkedList:
         current_node = self.head
         prev_node = None
 
-        # Process: iterate thru single linked list
+        # iterate thru single linked list
 
         while current_node is not None:
             # store next node
