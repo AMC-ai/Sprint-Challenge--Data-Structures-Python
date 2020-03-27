@@ -16,13 +16,13 @@ duplicates = []  # Return the list of duplicates in this data structure
 # Replace the nested for loops below with your improvements
 # initiate binary string
 nameBST = BinarySearchTree(names_1[0])
-# list one
+# search list one
 for name_1 in names_1:
     nameBST.insert(name_1)
-# list two
+# search list two
 for name_2 in names_2:
     if nameBST.contains(name_2):
-        # append duplicates
+        # append duplicates to data structure provided
         duplicates.append(name_2)
 
 end_time = time.time()
